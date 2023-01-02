@@ -14,6 +14,9 @@ switchMode.addEventListener('click', handleSwitchClick)
 let activeIndex = 0;
 
 const groups = document.getElementsByClassName("card-group");
+const hateButton = document.getElementById("hate-button");
+const loveButton = document.getElementById("love-button");
+
 const handleLoveClick = () => {
   const nextIndex = activeIndex + 1 <= groups.length - 1 ? activeIndex + 1 : 0;
   
@@ -45,3 +48,6 @@ const handleHateClick = () => {
     activeIndex = nextIndex;
   });
 }
+
+hateButton.addEventListener('click', handleHateClick)
+loveButton.addEventListener('click', handleLoveClick)
