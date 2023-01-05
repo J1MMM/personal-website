@@ -1,13 +1,30 @@
 // switch dark mode 
 let switchMode = document.getElementById("switch-mode");
+let darkmode = JSON.parse(localStorage.getItem('darkmode')) != null ? JSON.parse(localStorage.getItem('darkmode')) : true;
+console.log(darkmode);
 
 const handleSwitchClick = () => {
-  switchMode.classList.toggle("active")
-  document.body.classList.toggle("dark-mode")
+  darkmode = !darkmode;
+  changeMode();
+  localStorage.setItem('darkmode', darkmode);
+  console.log("click");
 }
 
 switchMode.addEventListener('click', handleSwitchClick)
 
+function changeMode(){
+  console.log("changemode");
+  if(darkmode === true){
+    document.body.classList.add("dark-mode")
+    switchMode.classList.add("active")
+  }else{
+    console.log("false");
+    document.body.classList.remove("dark-mode")
+    switchMode.classList.remove("active")
+  }
+
+}
+changeMode();
 
 
 // card functions
