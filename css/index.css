@@ -24,6 +24,8 @@ body{
     padding: 0;
     font-family: 'Lexend Deca', sans-serif;
     background-color: var(--dark);
+    transition-duration: 500ms;
+    
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -53,7 +55,7 @@ h1,h2,h3,h4,h5,h6,p{
 
 .main-container{
     /* border: 1px solid red; */
-    background-color: var(--dark);
+    background-color: transparent;
     max-width: 1350px;
     width: 100%;
     margin-left: auto;
@@ -127,6 +129,7 @@ h1,h2,h3,h4,h5,h6,p{
 .front-page > .wrapper{
     /* border: 1px solid red; */
     align-self: center;
+
 }
 .front-page > .wrapper > p{ 
     font-size: medium;
@@ -163,7 +166,6 @@ h1,h2,h3,h4,h5,h6,p{
     width: 10rem;
     transform: skew(-10deg);
     transition-duration: 300ms;
-
 }
 .front-page > .image-wrapper > .image:nth-child(1) > img{
     transform: scale(1.5) skew(10deg);
